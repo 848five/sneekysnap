@@ -2,7 +2,7 @@
 echo getcwd() . "\n";
 include($_SERVER['DOCUMENT_ROOT']."/includes/_dbconfig.php");
 
-mysql_select_db("admin", $con);
+
 $sql = "SELECT * FROM posts";
 
 $title = $_REQUEST['title'];
@@ -27,5 +27,4 @@ echo "1 record added";
 // 	echo $row['id'];
 // }
 
-mysql_close($con);
 ?>
