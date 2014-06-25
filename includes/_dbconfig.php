@@ -1,5 +1,5 @@
 <?php
-$link = mysql_connect('localhost', 'root', 'Cmb1h0aJ8v');
+$link = mysql_connect('localhost', 'root', 'Cmb1h0aJ8v', 'admin');
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
