@@ -1,8 +1,16 @@
 <?php
-$link = mysql_connect('localhost', 'root', 'Cmb1h0aJ8v', 'admin');
-if (!$link) {
+$conn = mysql_connect('localhost', 'root', 'Cmb1h0aJ8v', 'admin');
+if (!$conn) {
     die('Could not connect: ' . mysql_error());
 }
+
+$sql = "SELECT * FROM posts";
+$rs = mysql_query($sql, $conn) or die ('Problem with query' . mysql_error());
 echo 'Connected successfully';
-mysql_close($link);
+
+while ($row = mysql_fetch_array($rs)) {
+	echo $row["id"];
+}
+
+mysql_close($conn);
 ?>
