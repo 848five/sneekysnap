@@ -10,7 +10,7 @@ $rs = mysql_query($sql, $conn) or die ('Problem with query' . mysql_error());
 echo 'Connected successfully';
 
 while ($row = mysql_fetch_array($rs)) {
-	echo $row["id"];
+	echo $row['id'];
 }
 
 mysql_close($conn);
