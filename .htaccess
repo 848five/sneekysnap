@@ -2,4 +2,5 @@ ErrorDocument 404 /404.shtml
 
 
 RewriteEngine On
-RewriteRule ^([a-zA-Z0-9]+)/$ find.php?page=$1
+RewriteRule ^([a-zA-Z0-9]+)$ find.php?q=$1
+RewriteRule ^([a-zA-Z0-9]+)/$ find.php?q=$1
