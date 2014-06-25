@@ -8,3 +8,5 @@ ErrorDocument 500 /500.shtml
 #RewriteEngine On
 #RewriteRule ^([a-zA-Z0-9]+)$ find.php?q=$1
 #RewriteRule ^([a-zA-Z0-9]+)/$ find.php?q=$1
+
+php_flag display_errors 1
