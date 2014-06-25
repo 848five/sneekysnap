@@ -2,7 +2,7 @@
 echo getcwd() . "\n";
 include($_SERVER['DOCUMENT_ROOT']."/includes/_dbconfig.php");
 
-mysql_select_db("admin", $conn);
+mysql_select_db("admin", $con);
 $sql = "SELECT * FROM posts";
 
 $title = $_REQUEST['title'];
@@ -14,18 +14,18 @@ $images = $_REQUEST['images'];
 $sql="INSERT INTO posts (title, deck, article, images)
 VALUES ('$title','$deck','$article','$images')";
 
-if (!mysqli_query($conn,$sql)) {
-  die('Error: ' . mysqli_error($conn));
+if (!mysqli_query($con,$sql)) {
+  die('Error: ' . mysqli_error($con));
 }
 echo "1 record added";
 
 
-// $rs = mysql_query($sql, $conn) or die ('Problem with query' . mysql_error());
-// echo 'Connected successfully';
+// $rs = mysql_query($sql, $con) or die ('Problem with query' . mysql_error());
+// echo 'conected successfully';
 
 // while ($row = mysql_fetch_array($rs)) {
 // 	echo $row['id'];
 // }
 
-mysql_close($conn);
+mysql_close($con);
 ?>
