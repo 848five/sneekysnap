@@ -1,4 +1,5 @@
 <?php
+echo "welcome";
 $conn = mysql_connect('localhost', 'root', 'Cmb1h0aJ8v');
 if (!$conn) {
 	mysql_select_db("admin", $conn)
