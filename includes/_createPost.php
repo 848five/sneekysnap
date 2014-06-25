@@ -1,4 +1,5 @@
 <?php 
+echo getcwd() . "\n";
 include '/includes/_dbcongif.php';
 
 mysql_select_db("admin", $conn);
