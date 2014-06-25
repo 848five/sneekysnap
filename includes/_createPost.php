@@ -1,6 +1,6 @@
 <?php 
 echo getcwd() . "\n";
-include "_dbcongif.php";
+include($_SERVER['DOCUMENT_ROOT']."/includes/_dbconfig.php");
 
 mysql_select_db("admin", $conn);
 $sql = "SELECT * FROM posts";
