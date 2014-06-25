@@ -14,7 +14,7 @@ $sql="INSERT INTO posts (title, deck, article, images)
 VALUES ('$title','$deck','$article','$images')";
 
 if (!mysqli_query($conn,$sql)) {
-  die('Error: ' . mysqli_error($con));
+  die('Error: ' . mysqli_error($conn));
 }
 echo "1 record added";
 
