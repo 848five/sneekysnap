@@ -1,5 +1,5 @@
 <?php 
-include '_dbcongif.php';
+include '/includes/_dbcongif.php';
 
 mysql_select_db("admin", $conn);
 $sql = "SELECT * FROM posts";
