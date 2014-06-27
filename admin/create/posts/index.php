@@ -4,7 +4,7 @@
 
 
 <section id="create-post">
-	<form method="post" action="<?$_SERVER['DOCUMENT_ROOT']."/includes/_createPosts.php"?>">
+	<form method="post" action="<?$_SERVER['DOCUMENT_ROOT'].\"/includes/_createPosts.php\"?>">
 		<input type="text" name="title" />
 		<input type="text" name="deck" />
 		<textarea type="text" name="article"></textarea>
