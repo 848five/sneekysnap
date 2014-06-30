@@ -3,23 +3,14 @@ echo getcwd() . "\n";
 include($_SERVER['DOCUMENT_ROOT']."/admin/includes/_dbconfig.php");
 
 
-$SQL = "SELECT * FROM posts";
-$result = mysql_query($SQL);
-
-echo "-----posts-><br />";
-while ( $db_field = mysql_fetch_assoc($result) ) {
-
-print $db_field['title'] . "<BR>";
-
-
+mysql_select_db('admin');
+$retval = mysql_query( $sql, $conn );
+if(! $retval )
+{
+  die('Could not get data: ' . mysql_error());
 }
-echo "end posts-----";
-
-// $rs = mysql_query($sql, $con) or die ('Problem with query' . mysql_error());
-// echo 'conected successfully';
-
-// while ($row = mysql_fetch_array($rs)) {
-// 	echo $row['id'];
-// }
-
+while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+{
+    echo "title :{$row['title']}  <br> ";
+} 
 ?>
