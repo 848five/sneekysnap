@@ -9,6 +9,7 @@ $title = $_REQUEST['title'];
 $deck = $_REQUEST['deck'];
 $article = $_REQUEST['article'];
 $images = $_REQUEST['images'];
+echo $title ." being created";
 
 
 $sql="INSERT INTO posts (title, deck, article, images)
