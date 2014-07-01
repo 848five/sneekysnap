@@ -6,8 +6,8 @@ include($_SERVER['DOCUMENT_ROOT']."/admin/includes/_dbconfig.php");
 $sql = "SELECT * FROM posts";
 
 $title = $_REQUEST['title'];
-$meta_desc = $_REQUEST['meta-description'];
-$meta_keywords = $_REQUEST['meta-keywords'];
+$meta_desc = $_REQUEST['meta_description'];
+$meta_keywords = $_REQUEST['meta_keywords'];
 
 $page_type = $_REQUEST['page_type'];
 $page_template = $_REQUEST['page_template'];
