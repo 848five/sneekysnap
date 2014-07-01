@@ -1,5 +1,4 @@
 <?php 
-echo getcwd() . "\n";
 include($_SERVER['DOCUMENT_ROOT']."/admin/includes/_dbconfig.php");
 
 
