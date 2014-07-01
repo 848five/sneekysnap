@@ -22,8 +22,8 @@ echo $title ." page being created";
 $sql="INSERT INTO posts (title,meta_description, meta_keywords, page_type, page_template, page_ad, page_display_name ,deck,article)
 VALUES ('$title','$meta_desc','$meta_keywords','$page_type','$page_template','$page_ad','$page_display_name','$deck','$article')";
 
-if (!mysqli_query($con,$sql)) {
-  die('Error: ' . mysqli_error($con));
+if (!mysql_query($con,$sql)) {
+  die('Error: ' . mysql_error($con));
 }
 echo "1 record added";
 
