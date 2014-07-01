@@ -22,13 +22,12 @@ echo $title ." page being created";
 $sql="INSERT INTO posts (title,meta_description, meta_keywords, page_type, page_template, page_ad, page_display_name ,deck,article)
 VALUES ('$title','$meta_desc','$meta_keywords','$page_type','$page_template','$page_ad','$page_display_name','$deck','$article')";
 
-
-if (!mysqli_query($con,$sql)) {
-  die('Error: ' . mysqli_error($con));
+$retval = mysql_query( $sql, $con );
+if(! $retval )
+{
+  die('Could not enter data: ' . mysql_error());
 }
-echo "1 record added";
-
-
+echo "done";
 
 // $rs = mysql_query($sql, $con) or die ('Problem with query' . mysql_error());
 // echo 'conected successfully';
