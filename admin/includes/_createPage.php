@@ -18,6 +18,7 @@ $article = $_REQUEST['article'];
 //$images = $_REQUEST['images'];
 echo $title ." page being created";
 
+mysql_select_db('admin');
 
 $sql="INSERT INTO posts (title,meta_description, meta_keywords, page_type, page_template, page_ad, page_display_name ,deck,article)
 VALUES ('$title','$meta_desc','$meta_keywords','$page_type','$page_template','$page_ad','$page_display_name','$deck','$article')";
